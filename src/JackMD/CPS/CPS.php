@@ -8,8 +8,8 @@ use pocketmine\plugin\PluginBase;
 
 class CPS extends PluginBase{
 	
-	/** @var array */
-	private $clicks;
+        /** @var pocketmine\Player $player */
+        $clicks = $cps->getClicks($player);
 	
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
