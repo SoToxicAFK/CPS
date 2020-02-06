@@ -15,6 +15,8 @@ class CPS extends PluginBase{
 		$this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
 		$this->getLogger()->info("CPS Plugin Enabled.");
 	}
+        /** @var pocketmine\Player $player */
+        $clicks = $cps->getClicks($player); 
 	
 	/**
 	 * @param Player $player
